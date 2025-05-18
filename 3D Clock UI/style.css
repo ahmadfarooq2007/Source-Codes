@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+.clock {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #111 60%, #1d1d2e 100%);
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.2),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+  transform: perspective(1000px) rotateX(15deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.clock-name {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 1rem;
+  color: #00ffee;
+  text-shadow: 0 0 5px #00ffee, 0 0 10px #00ffee;
+  letter-spacing: 1px;
+  font-weight: bold;
+  z-index: 4;
+}
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(0deg);
+  border-radius: 6px;
+}
+.hour {
+  width: 8px;
+  height: 80px;
+  background: #ff4c4c;
+  box-shadow: 0 0 15px #ff4c4c;
+  z-index: 3;
+}
+.minute {
+  width: 6px;
+  height: 110px;
+  background: #00bfff;
+  box-shadow: 0 0 12px #00bfff;
+  z-index: 2;
+}
+.second {
+  width: 2px;
+  height: 130px;
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+  z-index: 1;
+}
+.center-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #fff, inset 0 0 5px #000;
+  z-index: 5;
+}
+.digital-time {
+  font-size: 2rem;
+  color: #00ffee;
+  text-shadow: 0 0 10px #00ffee, 0 0 20px #00ffee;
+  letter-spacing: 2px;
+}
